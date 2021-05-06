@@ -1,0 +1,189 @@
+2021/03/15-16:53:47.199475 542c RocksDB version: 5.14.3
+2021/03/15-16:53:47.199550 542c Git sha rocksdb_build_git_sha:@626550343f861ab19d4fdcb74fde728a6c043e6a@
+2021/03/15-16:53:47.199575 542c Compile date Oct  9 2018
+2021/03/15-16:53:47.199594 542c DB SUMMARY
+2021/03/15-16:53:47.199777 542c CURRENT file:  CURRENT
+2021/03/15-16:53:47.199799 542c IDENTITY file:  IDENTITY
+2021/03/15-16:53:47.199829 542c MANIFEST file:  MANIFEST-000038 size: 59 Bytes
+2021/03/15-16:53:47.199851 542c SST files in ./data/log_3 dir, Total Num: 0, files: 
+2021/03/15-16:53:47.199869 542c Write Ahead Log file in ./data/log_3: 000039.log size: 0 ; 
+2021/03/15-16:53:47.199904 542c                         Options.error_if_exists: 0
+2021/03/15-16:53:47.199937 542c                       Options.create_if_missing: 1
+2021/03/15-16:53:47.200162 542c                         Options.paranoid_checks: 1
+2021/03/15-16:53:47.200173 542c                                     Options.env: 0000000000F7A170
+2021/03/15-16:53:47.200179 542c                                Options.info_log: 0000000046DA3000
+2021/03/15-16:53:47.200185 542c                Options.max_file_opening_threads: 16
+2021/03/15-16:53:47.200191 542c                              Options.statistics: 0000000000000000
+2021/03/15-16:53:47.200197 542c                               Options.use_fsync: 0
+2021/03/15-16:53:47.200203 542c                       Options.max_log_file_size: 0
+2021/03/15-16:53:47.200209 542c                  Options.max_manifest_file_size: 18446744073709551615
+2021/03/15-16:53:47.200215 542c                   Options.log_file_time_to_roll: 0
+2021/03/15-16:53:47.200221 542c                       Options.keep_log_file_num: 1000
+2021/03/15-16:53:47.200227 542c                    Options.recycle_log_file_num: 0
+2021/03/15-16:53:47.200232 542c                         Options.allow_fallocate: 1
+2021/03/15-16:53:47.200238 542c                        Options.allow_mmap_reads: 0
+2021/03/15-16:53:47.200244 542c                       Options.allow_mmap_writes: 0
+2021/03/15-16:53:47.200250 542c                        Options.use_direct_reads: 0
+2021/03/15-16:53:47.200255 542c                        Options.use_direct_io_for_flush_and_compaction: 0
+2021/03/15-16:53:47.200261 542c          Options.create_missing_column_families: 0
+2021/03/15-16:53:47.200267 542c                              Options.db_log_dir: 
+2021/03/15-16:53:47.200273 542c                                 Options.wal_dir: ./data/log_3
+2021/03/15-16:53:47.200278 542c                Options.table_cache_numshardbits: 6
+2021/03/15-16:53:47.200284 542c                      Options.max_subcompactions: 1
+2021/03/15-16:53:47.200290 542c                  Options.max_background_flushes: -1
+2021/03/15-16:53:47.200296 542c                         Options.WAL_ttl_seconds: 0
+2021/03/15-16:53:47.200302 542c                       Options.WAL_size_limit_MB: 0
+2021/03/15-16:53:47.200307 542c             Options.manifest_preallocation_size: 4194304
+2021/03/15-16:53:47.200313 542c                     Options.is_fd_close_on_exec: 1
+2021/03/15-16:53:47.200319 542c                   Options.advise_random_on_open: 1
+2021/03/15-16:53:47.200324 542c                    Options.db_write_buffer_size: 0
+2021/03/15-16:53:47.200330 542c                    Options.write_buffer_manager: 0000000046D303C0
+2021/03/15-16:53:47.200336 542c         Options.access_hint_on_compaction_start: 1
+2021/03/15-16:53:47.200342 542c  Options.new_table_reader_for_compaction_inputs: 0
+2021/03/15-16:53:47.200347 542c           Options.random_access_max_buffer_size: 1048576
+2021/03/15-16:53:47.200353 542c                      Options.use_adaptive_mutex: 0
+2021/03/15-16:53:47.200365 542c                            Options.rate_limiter: 0000000000000000
+2021/03/15-16:53:47.200372 542c     Options.sst_file_manager.rate_bytes_per_sec: 0
+2021/03/15-16:53:47.200378 542c                       Options.wal_recovery_mode: 2
+2021/03/15-16:53:47.200383 542c                  Options.enable_thread_tracking: 0
+2021/03/15-16:53:47.200389 542c                  Options.enable_pipelined_write: 0
+2021/03/15-16:53:47.200395 542c         Options.allow_concurrent_memtable_write: 1
+2021/03/15-16:53:47.200434 542c      Options.enable_write_thread_adaptive_yield: 1
+2021/03/15-16:53:47.200444 542c             Options.write_thread_max_yield_usec: 100
+2021/03/15-16:53:47.200449 542c            Options.write_thread_slow_yield_usec: 3
+2021/03/15-16:53:47.200455 542c                               Options.row_cache: None
+2021/03/15-16:53:47.200461 542c                              Options.wal_filter: None
+2021/03/15-16:53:47.200466 542c             Options.avoid_flush_during_recovery: 0
+2021/03/15-16:53:47.200472 542c             Options.allow_ingest_behind: 0
+2021/03/15-16:53:47.200478 542c             Options.preserve_deletes: 0
+2021/03/15-16:53:47.200483 542c             Options.two_write_queues: 0
+2021/03/15-16:53:47.200489 542c             Options.manual_wal_flush: 0
+2021/03/15-16:53:47.200495 542c             Options.max_background_jobs: 2
+2021/03/15-16:53:47.200500 542c             Options.max_background_compactions: -1
+2021/03/15-16:53:47.200506 542c             Options.avoid_flush_during_shutdown: 0
+2021/03/15-16:53:47.200512 542c           Options.writable_file_max_buffer_size: 1048576
+2021/03/15-16:53:47.200517 542c             Options.delayed_write_rate : 16777216
+2021/03/15-16:53:47.200523 542c             Options.max_total_wal_size: 0
+2021/03/15-16:53:47.200529 542c             Options.delete_obsolete_files_period_micros: 21600000000
+2021/03/15-16:53:47.200535 542c                   Options.stats_dump_period_sec: 600
+2021/03/15-16:53:47.200540 542c                          Options.max_open_files: -1
+2021/03/15-16:53:47.200546 542c                          Options.bytes_per_sync: 0
+2021/03/15-16:53:47.200552 542c                      Options.wal_bytes_per_sync: 0
+2021/03/15-16:53:47.200557 542c       Options.compaction_readahead_size: 0
+2021/03/15-16:53:47.200563 542c Compression algorithms supported:
+2021/03/15-16:53:47.200569 542c 	kZSTD supported: 0
+2021/03/15-16:53:47.200575 542c 	kSnappyCompression supported: 0
+2021/03/15-16:53:47.200581 542c 	kBZip2Compression supported: 0
+2021/03/15-16:53:47.200586 542c 	kZlibCompression supported: 0
+2021/03/15-16:53:47.200592 542c 	kLZ4Compression supported: 0
+2021/03/15-16:53:47.200598 542c 	kXpressCompression supported: 0
+2021/03/15-16:53:47.200603 542c 	kLZ4HCCompression supported: 0
+2021/03/15-16:53:47.200609 542c 	kZSTDNotFinalCompression supported: 0
+2021/03/15-16:53:47.200617 542c Fast CRC32 supported: Supported on x86
+2021/03/15-16:53:47.201315 542c [c:\users\aretter\code\rocksdb\db\version_set.cc:3085] Recovering from manifest file: MANIFEST-000038
+2021/03/15-16:53:47.201446 542c [c:\users\aretter\code\rocksdb\db\column_family.cc:475] --------------- Options for column family [default]:
+2021/03/15-16:53:47.201456 542c               Options.comparator: leveldb.BytewiseComparator
+2021/03/15-16:53:47.201462 542c           Options.merge_operator: None
+2021/03/15-16:53:47.201467 542c        Options.compaction_filter: None
+2021/03/15-16:53:47.201472 542c        Options.compaction_filter_factory: None
+2021/03/15-16:53:47.201478 542c         Options.memtable_factory: SkipListFactory
+2021/03/15-16:53:47.201483 542c            Options.table_factory: BlockBasedTable
+2021/03/15-16:53:47.201523 542c            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (0000000000EF52C0)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 0
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  index_type: 0
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 0000000000F5A0A0
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 8388608
+    num_shard_bits : 4
+    strict_capacity_limit : 0
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 4096
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 1
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: nullptr
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 2
+  enable_index_compression: 1
+  block_align: 0
+2021/03/15-16:53:47.201575 542c        Options.write_buffer_size: 67108864
+2021/03/15-16:53:47.201584 542c  Options.max_write_buffer_number: 2
+2021/03/15-16:53:47.201589 542c          Options.compression: NoCompression
+2021/03/15-16:53:47.201595 542c                  Options.bottommost_compression: Disabled
+2021/03/15-16:53:47.201600 542c       Options.prefix_extractor: nullptr
+2021/03/15-16:53:47.201605 542c   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2021/03/15-16:53:47.201611 542c             Options.num_levels: 7
+2021/03/15-16:53:47.201616 542c        Options.min_write_buffer_number_to_merge: 1
+2021/03/15-16:53:47.201621 542c     Options.max_write_buffer_number_to_maintain: 0
+2021/03/15-16:53:47.201626 542c            Options.compression_opts.window_bits: -14
+2021/03/15-16:53:47.201632 542c                  Options.compression_opts.level: -1
+2021/03/15-16:53:47.201637 542c               Options.compression_opts.strategy: 0
+2021/03/15-16:53:47.201643 542c         Options.compression_opts.max_dict_bytes: 0
+2021/03/15-16:53:47.201648 542c         Options.compression_opts.zstd_max_train_bytes: 0
+2021/03/15-16:53:47.201653 542c      Options.level0_file_num_compaction_trigger: 4
+2021/03/15-16:53:47.201659 542c          Options.level0_slowdown_writes_trigger: 20
+2021/03/15-16:53:47.201664 542c              Options.level0_stop_writes_trigger: 36
+2021/03/15-16:53:47.201669 542c                   Options.target_file_size_base: 67108864
+2021/03/15-16:53:47.201675 542c             Options.target_file_size_multiplier: 1
+2021/03/15-16:53:47.201680 542c                Options.max_bytes_for_level_base: 268435456
+2021/03/15-16:53:47.201686 542c Options.level_compaction_dynamic_level_bytes: 0
+2021/03/15-16:53:47.201691 542c          Options.max_bytes_for_level_multiplier: 10.000000
+2021/03/15-16:53:47.201698 542c Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2021/03/15-16:53:47.201703 542c Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2021/03/15-16:53:47.201709 542c Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2021/03/15-16:53:47.201714 542c Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2021/03/15-16:53:47.201719 542c Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2021/03/15-16:53:47.201725 542c Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2021/03/15-16:53:47.201730 542c Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2021/03/15-16:53:47.201735 542c       Options.max_sequential_skip_in_iterations: 8
+2021/03/15-16:53:47.201741 542c                    Options.max_compaction_bytes: 1677721600
+2021/03/15-16:53:47.201746 542c                        Options.arena_block_size: 8388608
+2021/03/15-16:53:47.201752 542c   Options.soft_pending_compaction_bytes_limit: 68719476736
+2021/03/15-16:53:47.201757 542c   Options.hard_pending_compaction_bytes_limit: 274877906944
+2021/03/15-16:53:47.201762 542c       Options.rate_limit_delay_max_milliseconds: 100
+2021/03/15-16:53:47.201768 542c                Options.disable_auto_compactions: 0
+2021/03/15-16:53:47.201774 542c                        Options.compaction_style: kCompactionStyleLevel
+2021/03/15-16:53:47.201780 542c                          Options.compaction_pri: kByCompensatedSize
+2021/03/15-16:53:47.201785 542c Options.compaction_options_universal.size_ratio: 1
+2021/03/15-16:53:47.201790 542c Options.compaction_options_universal.min_merge_width: 2
+2021/03/15-16:53:47.201796 542c Options.compaction_options_universal.max_merge_width: 4294967295
+2021/03/15-16:53:47.201801 542c Options.compaction_options_universal.max_size_amplification_percent: 200
+2021/03/15-16:53:47.201807 542c Options.compaction_options_universal.compression_size_percent: -1
+2021/03/15-16:53:47.201812 542c Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2021/03/15-16:53:47.201818 542c Options.compaction_options_fifo.max_table_files_size: 1073741824
+2021/03/15-16:53:47.201823 542c Options.compaction_options_fifo.allow_compaction: 0
+2021/03/15-16:53:47.201830 542c Options.compaction_options_fifo.ttl: 0
+2021/03/15-16:53:47.201837 542c                   Options.table_properties_collectors: 
+2021/03/15-16:53:47.201843 542c                   Options.inplace_update_support: 0
+2021/03/15-16:53:47.201848 542c                 Options.inplace_update_num_locks: 10000
+2021/03/15-16:53:47.201854 542c               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2021/03/15-16:53:47.201859 542c   Options.memtable_huge_page_size: 0
+2021/03/15-16:53:47.201865 542c                           Options.bloom_locality: 0
+2021/03/15-16:53:47.201870 542c                    Options.max_successive_merges: 0
+2021/03/15-16:53:47.201875 542c                Options.optimize_filters_for_hits: 0
+2021/03/15-16:53:47.201881 542c                Options.paranoid_file_checks: 0
+2021/03/15-16:53:47.201886 542c                Options.force_consistency_checks: 0
+2021/03/15-16:53:47.201891 542c                Options.report_bg_io_stats: 0
+2021/03/15-16:53:47.201897 542c                               Options.ttl: 0
+2021/03/15-16:53:47.203784 542c [c:\users\aretter\code\rocksdb\db\version_set.cc:3361] Recovered from manifest file:./data/log_3/MANIFEST-000038 succeeded,manifest_file_number is 38, next_file_number is 40, last_sequence is 0, log_number is 0,prev_log_number is 0,max_column_family is 0,min_log_number_to_keep is 0
+2021/03/15-16:53:47.203798 542c [c:\users\aretter\code\rocksdb\db\version_set.cc:3369] Column family [default] (ID 0), log number is 37
+2021/03/15-16:53:47.204100 542c EVENT_LOG_v1 {"time_micros": 1615798427204093, "job": 1, "event": "recovery_started", "log_files": [39]}
+2021/03/15-16:53:47.204129 542c [c:\users\aretter\code\rocksdb\db\db_impl_open.cc:551] Recovering log #39 mode 2
+2021/03/15-16:53:47.204321 542c [c:\users\aretter\code\rocksdb\db\version_set.cc:2847] Creating manifest 41
+2021/03/15-16:53:47.247055 542c EVENT_LOG_v1 {"time_micros": 1615798427247048, "job": 1, "event": "recovery_finished"}
+2021/03/15-16:53:47.281524 542c [c:\users\aretter\code\rocksdb\db\db_impl_open.cc:1219] DB pointer 0000000046D7F5A0
+2021/03/15-16:57:22.292918 848c [c:\users\aretter\code\rocksdb\db\db_impl.cc:252] Shutdown: canceling all background work
+2021/03/15-16:57:22.293797 848c [c:\users\aretter\code\rocksdb\db\db_impl.cc:398] Shutdown complete

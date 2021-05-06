@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EFRPC-SHORT/efrpc-short.iml" filepath="$PROJECT_DIR$/EFRPC-SHORT/efrpc-short.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EFZAB/efzab.iml" filepath="$PROJECT_DIR$/EFZAB/efzab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/zab.iml" filepath="$PROJECT_DIR$/.idea/zab.iml" />
+    </modules>
+  </component>
+</project>
