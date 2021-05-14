@@ -13,10 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class DataRequestProcessor implements NettyRequestProcessor {
     private static final Logger logger = LogManager.getLogger(DataRequestProcessor.class.getSimpleName());
 
@@ -31,11 +28,16 @@ public class DataRequestProcessor implements NettyRequestProcessor {
         try {
             if (node.getDataLock().tryLock(3000, TimeUnit.MILLISECONDS)) {
                 DataMessage dataMsg = DataMessage.getInstance().parseMessage(request);
+                //心跳消息
                 if (dataMsg.getType() == DataMessage.Type.SYNC) {
                     logger.info("Receive heartbeat message: " + dataMsg);
+                    //重置时间，保证不去投票选新的王
                     node.getNodeConfig().setPreElectionTime(System.currentTimeMillis());
+                    //重置时间，不去发心跳
                     node.getNodeConfig().setPreHeartbeatTime(System.currentTimeMillis());
+                    //设置节点状态
                     node.setStatus(NodeStatus.FOLLOWING);
+                    //设置主节点的id
                     node.setLeaderId(dataMsg.getNodeId());
 
                     Data lastData = node.getDataManager().readLastData();

@@ -12,10 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class Client {
     private static final Logger logger = LogManager.getLogger(Client.class.getSimpleName());
 

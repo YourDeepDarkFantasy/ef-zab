@@ -4,10 +4,7 @@ import com.wiqer.efzab.data.ZxId;
 import com.wiqer.efzab.message.AbstractMessage;
 import com.wiqer.efzab.message.MessageType;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class JoinGroupMessage extends AbstractMessage<JoinGroupMessage> {
     private int nodeId;
     private String host;

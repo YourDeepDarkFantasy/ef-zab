@@ -4,10 +4,7 @@ import com.wiqer.efrpcshort.protocol.JSONSerializable;
 import com.wiqer.efrpcshort.protocol.RemotingMessage;
 import com.wiqer.efrpcshort.protocol.RemotingMessageHeader;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public abstract class AbstractMessage<T> {
 
     public RemotingMessage request() {

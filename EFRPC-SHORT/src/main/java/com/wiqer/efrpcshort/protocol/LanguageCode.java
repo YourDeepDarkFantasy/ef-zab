@@ -1,9 +1,6 @@
 package com.wiqer.efrpcshort.protocol;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public enum LanguageCode {
     JAVA((byte) 0),
     GOLANG((byte) 1),

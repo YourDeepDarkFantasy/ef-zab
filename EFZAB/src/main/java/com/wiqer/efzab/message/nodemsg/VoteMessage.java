@@ -4,10 +4,7 @@ import com.wiqer.efzab.Vote;
 import com.wiqer.efzab.message.AbstractMessage;
 import com.wiqer.efzab.message.MessageType;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class VoteMessage extends AbstractMessage<VoteMessage> {
     private Vote vote;
 

@@ -6,12 +6,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NodeConfig {
+    /*开始是本地节点，根据交互添加具体节点，Map，第二端口*/
     private final Map<Integer, String> nodeMap = new HashMap<>();
+    /*根据配置文件，加载全部节点的map，第一个端口*/
     private final Map<Integer, String> nodeMgrMap = new HashMap<>();
 
     private int nodeId;

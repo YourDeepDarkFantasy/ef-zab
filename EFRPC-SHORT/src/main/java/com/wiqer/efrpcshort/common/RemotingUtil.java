@@ -3,10 +3,7 @@ package com.wiqer.efrpcshort.common;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class RemotingUtil {
     public static String parseSocketAddressAddr(SocketAddress socketAddress) {
         if (socketAddress != null) {

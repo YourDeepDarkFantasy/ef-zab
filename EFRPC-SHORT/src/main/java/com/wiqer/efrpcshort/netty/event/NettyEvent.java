@@ -2,10 +2,7 @@ package com.wiqer.efrpcshort.netty.event;
 
 import io.netty.channel.Channel;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NettyEvent {
     private final NettyEventType type;
     private final String remoteAddr;

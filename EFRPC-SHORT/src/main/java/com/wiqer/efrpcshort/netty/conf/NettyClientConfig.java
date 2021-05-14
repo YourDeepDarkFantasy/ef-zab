@@ -1,9 +1,6 @@
 package com.wiqer.efrpcshort.netty.conf;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NettyClientConfig {
     private int workerThreads = 4;
     private int callbackExecutorThreads = Runtime.getRuntime().availableProcessors();

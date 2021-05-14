@@ -2,10 +2,7 @@ package com.wiqer.efzab.data;
 
 import com.wiqer.efrpcshort.common.Pair;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class Data {
     private ZxId zxId;
     private Pair<String, String> kv;

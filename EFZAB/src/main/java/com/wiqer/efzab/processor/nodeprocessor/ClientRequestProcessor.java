@@ -9,10 +9,7 @@ import io.netty.channel.ChannelHandlerContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class ClientRequestProcessor implements NettyRequestProcessor {
     private static final Logger logger = LogManager.getLogger(ClientRequestProcessor.class.getSimpleName());
 
@@ -39,16 +36,19 @@ public class ClientRequestProcessor implements NettyRequestProcessor {
             return kvMessage.response(request);
         }
 
+        //不是主节点，需要把消息同步到主节点，再向下执行
         if (node.getStatus() != NodeStatus.LEADING) {
             logger.info("Redirect to leader: " + node.getLeaderId());
             return node.redirect(request);
         }
-
+        //
         if (kvType == KVMessage.KVType.PUT) {
             boolean flag = node.getDataManager().put(kvMessage.getKey(), kvMessage.getValue());
             if (flag) {
                 node.getSnapshotMap().put(node.getNodeConfig().getNodeId(), true);
+                //发送给所有节点
                 node.appendData(kvMessage.getKey(), kvMessage.getValue());
+                //通知所有节点提交数据
                 boolean committed = node.commitData(kvMessage.getKey());
                 kvMessage.setSuccess(committed);
             }else {

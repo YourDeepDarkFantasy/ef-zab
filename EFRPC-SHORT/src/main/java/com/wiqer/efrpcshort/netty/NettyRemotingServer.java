@@ -32,10 +32,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NettyRemotingServer extends NettyRemotingAbstract implements RemotingServer {
     private static final Logger logger = LogManager.getLogger(NettyRemotingServer.class.getSimpleName());
 
@@ -115,8 +112,11 @@ public class NettyRemotingServer extends NettyRemotingAbstract implements Remoti
                         socketChannel.pipeline().addLast(defaultEventExecutorGroup,
                                 new NettyEncoder(),
                                 new NettyDecoder(),
+                                /*心跳*/
                                 new IdleStateHandler(0, 0, serverConfig.getChannelMaxIdleSeconds()),
+                                /*处理器关联服务，向本地推送消息putNettyEvent*/
                                 new NettyServerConnMgrHandler(NettyRemotingServer.this),
+                                /*处理器关联服务，调用本地processMessageReceived方法*/
                                 new NettyServerHandler(NettyRemotingServer.this)
                         );
                     }

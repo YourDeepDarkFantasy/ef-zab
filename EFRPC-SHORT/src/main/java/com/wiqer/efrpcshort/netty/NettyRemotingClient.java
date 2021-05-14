@@ -28,10 +28,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NettyRemotingClient extends NettyRemotingAbstract implements RemotingClient {
     private static final Logger logger = LogManager.getLogger(NettyRemotingClient.class.getSimpleName());
     private static final long LOCK_TIMEOUT = 3000;

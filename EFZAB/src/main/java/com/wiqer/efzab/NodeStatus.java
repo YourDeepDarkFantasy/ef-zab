@@ -1,11 +1,11 @@
 package com.wiqer.efzab;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public enum NodeStatus {
+    /*观察者*/
     LOOKING,
+    /*主*/
     LEADING,
+    /*从*/
     FOLLOWING,
 }

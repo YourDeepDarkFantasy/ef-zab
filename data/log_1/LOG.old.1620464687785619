@@ -1,0 +1,189 @@
+2021/05/07-11:04:22.409184 fa4 RocksDB version: 5.14.3
+2021/05/07-11:04:22.409295 fa4 Git sha rocksdb_build_git_sha:@626550343f861ab19d4fdcb74fde728a6c043e6a@
+2021/05/07-11:04:22.409336 fa4 Compile date Oct  9 2018
+2021/05/07-11:04:22.409355 fa4 DB SUMMARY
+2021/05/07-11:04:22.409560 fa4 CURRENT file:  CURRENT
+2021/05/07-11:04:22.409581 fa4 IDENTITY file:  IDENTITY
+2021/05/07-11:04:22.409625 fa4 MANIFEST file:  MANIFEST-000008 size: 84 Bytes
+2021/05/07-11:04:22.409645 fa4 SST files in ./data/log_1 dir, Total Num: 1, files: 000007.sst 
+2021/05/07-11:04:22.409663 fa4 Write Ahead Log file in ./data/log_1: 000009.log size: 0 ; 
+2021/05/07-11:04:22.409680 fa4                         Options.error_if_exists: 0
+2021/05/07-11:04:22.409698 fa4                       Options.create_if_missing: 1
+2021/05/07-11:04:22.409908 fa4                         Options.paranoid_checks: 1
+2021/05/07-11:04:22.409917 fa4                                     Options.env: 0000000001081C20
+2021/05/07-11:04:22.409924 fa4                                Options.info_log: 0000000046E46310
+2021/05/07-11:04:22.409929 fa4                Options.max_file_opening_threads: 16
+2021/05/07-11:04:22.409941 fa4                              Options.statistics: 0000000000000000
+2021/05/07-11:04:22.409964 fa4                               Options.use_fsync: 0
+2021/05/07-11:04:22.409970 fa4                       Options.max_log_file_size: 0
+2021/05/07-11:04:22.409976 fa4                  Options.max_manifest_file_size: 18446744073709551615
+2021/05/07-11:04:22.409983 fa4                   Options.log_file_time_to_roll: 0
+2021/05/07-11:04:22.409989 fa4                       Options.keep_log_file_num: 1000
+2021/05/07-11:04:22.409995 fa4                    Options.recycle_log_file_num: 0
+2021/05/07-11:04:22.410001 fa4                         Options.allow_fallocate: 1
+2021/05/07-11:04:22.410007 fa4                        Options.allow_mmap_reads: 0
+2021/05/07-11:04:22.410013 fa4                       Options.allow_mmap_writes: 0
+2021/05/07-11:04:22.410019 fa4                        Options.use_direct_reads: 0
+2021/05/07-11:04:22.410025 fa4                        Options.use_direct_io_for_flush_and_compaction: 0
+2021/05/07-11:04:22.410031 fa4          Options.create_missing_column_families: 0
+2021/05/07-11:04:22.410037 fa4                              Options.db_log_dir: 
+2021/05/07-11:04:22.410042 fa4                                 Options.wal_dir: ./data/log_1
+2021/05/07-11:04:22.410048 fa4                Options.table_cache_numshardbits: 6
+2021/05/07-11:04:22.410054 fa4                      Options.max_subcompactions: 1
+2021/05/07-11:04:22.410060 fa4                  Options.max_background_flushes: -1
+2021/05/07-11:04:22.410066 fa4                         Options.WAL_ttl_seconds: 0
+2021/05/07-11:04:22.410072 fa4                       Options.WAL_size_limit_MB: 0
+2021/05/07-11:04:22.410078 fa4             Options.manifest_preallocation_size: 4194304
+2021/05/07-11:04:22.410084 fa4                     Options.is_fd_close_on_exec: 1
+2021/05/07-11:04:22.410090 fa4                   Options.advise_random_on_open: 1
+2021/05/07-11:04:22.410096 fa4                    Options.db_write_buffer_size: 0
+2021/05/07-11:04:22.410102 fa4                    Options.write_buffer_manager: 0000000046E79310
+2021/05/07-11:04:22.410108 fa4         Options.access_hint_on_compaction_start: 1
+2021/05/07-11:04:22.410114 fa4  Options.new_table_reader_for_compaction_inputs: 0
+2021/05/07-11:04:22.410120 fa4           Options.random_access_max_buffer_size: 1048576
+2021/05/07-11:04:22.410126 fa4                      Options.use_adaptive_mutex: 0
+2021/05/07-11:04:22.410132 fa4                            Options.rate_limiter: 0000000000000000
+2021/05/07-11:04:22.410138 fa4     Options.sst_file_manager.rate_bytes_per_sec: 0
+2021/05/07-11:04:22.410144 fa4                       Options.wal_recovery_mode: 2
+2021/05/07-11:04:22.410150 fa4                  Options.enable_thread_tracking: 0
+2021/05/07-11:04:22.410155 fa4                  Options.enable_pipelined_write: 0
+2021/05/07-11:04:22.410161 fa4         Options.allow_concurrent_memtable_write: 1
+2021/05/07-11:04:22.410198 fa4      Options.enable_write_thread_adaptive_yield: 1
+2021/05/07-11:04:22.410208 fa4             Options.write_thread_max_yield_usec: 100
+2021/05/07-11:04:22.410214 fa4            Options.write_thread_slow_yield_usec: 3
+2021/05/07-11:04:22.410220 fa4                               Options.row_cache: None
+2021/05/07-11:04:22.410226 fa4                              Options.wal_filter: None
+2021/05/07-11:04:22.410232 fa4             Options.avoid_flush_during_recovery: 0
+2021/05/07-11:04:22.410238 fa4             Options.allow_ingest_behind: 0
+2021/05/07-11:04:22.410244 fa4             Options.preserve_deletes: 0
+2021/05/07-11:04:22.410265 fa4             Options.two_write_queues: 0
+2021/05/07-11:04:22.410271 fa4             Options.manual_wal_flush: 0
+2021/05/07-11:04:22.410276 fa4             Options.max_background_jobs: 2
+2021/05/07-11:04:22.410281 fa4             Options.max_background_compactions: -1
+2021/05/07-11:04:22.410286 fa4             Options.avoid_flush_during_shutdown: 0
+2021/05/07-11:04:22.410291 fa4           Options.writable_file_max_buffer_size: 1048576
+2021/05/07-11:04:22.410297 fa4             Options.delayed_write_rate : 16777216
+2021/05/07-11:04:22.410302 fa4             Options.max_total_wal_size: 0
+2021/05/07-11:04:22.410307 fa4             Options.delete_obsolete_files_period_micros: 21600000000
+2021/05/07-11:04:22.410312 fa4                   Options.stats_dump_period_sec: 600
+2021/05/07-11:04:22.410318 fa4                          Options.max_open_files: -1
+2021/05/07-11:04:22.410323 fa4                          Options.bytes_per_sync: 0
+2021/05/07-11:04:22.410328 fa4                      Options.wal_bytes_per_sync: 0
+2021/05/07-11:04:22.410333 fa4       Options.compaction_readahead_size: 0
+2021/05/07-11:04:22.410338 fa4 Compression algorithms supported:
+2021/05/07-11:04:22.410344 fa4 	kZSTD supported: 0
+2021/05/07-11:04:22.410366 fa4 	kSnappyCompression supported: 0
+2021/05/07-11:04:22.410372 fa4 	kBZip2Compression supported: 0
+2021/05/07-11:04:22.410377 fa4 	kZlibCompression supported: 0
+2021/05/07-11:04:22.410383 fa4 	kLZ4Compression supported: 0
+2021/05/07-11:04:22.410388 fa4 	kXpressCompression supported: 0
+2021/05/07-11:04:22.410393 fa4 	kLZ4HCCompression supported: 0
+2021/05/07-11:04:22.410399 fa4 	kZSTDNotFinalCompression supported: 0
+2021/05/07-11:04:22.410406 fa4 Fast CRC32 supported: Supported on x86
+2021/05/07-11:04:22.411112 fa4 [c:\users\aretter\code\rocksdb\db\version_set.cc:3085] Recovering from manifest file: MANIFEST-000008
+2021/05/07-11:04:22.411252 fa4 [c:\users\aretter\code\rocksdb\db\column_family.cc:475] --------------- Options for column family [default]:
+2021/05/07-11:04:22.411263 fa4               Options.comparator: leveldb.BytewiseComparator
+2021/05/07-11:04:22.411269 fa4           Options.merge_operator: None
+2021/05/07-11:04:22.411275 fa4        Options.compaction_filter: None
+2021/05/07-11:04:22.411281 fa4        Options.compaction_filter_factory: None
+2021/05/07-11:04:22.411287 fa4         Options.memtable_factory: SkipListFactory
+2021/05/07-11:04:22.411293 fa4            Options.table_factory: BlockBasedTable
+2021/05/07-11:04:22.411337 fa4            table_factory options:   flush_block_policy_factory: FlushBlockBySizePolicyFactory (00000000010051F0)
+  cache_index_and_filter_blocks: 0
+  cache_index_and_filter_blocks_with_high_priority: 0
+  pin_l0_filter_and_index_blocks_in_cache: 0
+  index_type: 0
+  hash_index_allow_collision: 1
+  checksum: 1
+  no_block_cache: 0
+  block_cache: 000000000106D090
+  block_cache_name: LRUCache
+  block_cache_options:
+    capacity : 8388608
+    num_shard_bits : 4
+    strict_capacity_limit : 0
+    high_pri_pool_ratio: 0.000
+  block_cache_compressed: 0000000000000000
+  persistent_cache: 0000000000000000
+  block_size: 4096
+  block_size_deviation: 10
+  block_restart_interval: 16
+  index_block_restart_interval: 1
+  metadata_block_size: 4096
+  partition_filters: 0
+  use_delta_encoding: 1
+  filter_policy: nullptr
+  whole_key_filtering: 1
+  verify_compression: 0
+  read_amp_bytes_per_bit: 0
+  format_version: 2
+  enable_index_compression: 1
+  block_align: 0
+2021/05/07-11:04:22.411378 fa4        Options.write_buffer_size: 67108864
+2021/05/07-11:04:22.411388 fa4  Options.max_write_buffer_number: 2
+2021/05/07-11:04:22.411394 fa4          Options.compression: NoCompression
+2021/05/07-11:04:22.411400 fa4                  Options.bottommost_compression: Disabled
+2021/05/07-11:04:22.411406 fa4       Options.prefix_extractor: nullptr
+2021/05/07-11:04:22.411412 fa4   Options.memtable_insert_with_hint_prefix_extractor: nullptr
+2021/05/07-11:04:22.411418 fa4             Options.num_levels: 7
+2021/05/07-11:04:22.411423 fa4        Options.min_write_buffer_number_to_merge: 1
+2021/05/07-11:04:22.411429 fa4     Options.max_write_buffer_number_to_maintain: 0
+2021/05/07-11:04:22.411435 fa4            Options.compression_opts.window_bits: -14
+2021/05/07-11:04:22.411441 fa4                  Options.compression_opts.level: -1
+2021/05/07-11:04:22.411447 fa4               Options.compression_opts.strategy: 0
+2021/05/07-11:04:22.411453 fa4         Options.compression_opts.max_dict_bytes: 0
+2021/05/07-11:04:22.411459 fa4         Options.compression_opts.zstd_max_train_bytes: 0
+2021/05/07-11:04:22.411465 fa4      Options.level0_file_num_compaction_trigger: 4
+2021/05/07-11:04:22.411471 fa4          Options.level0_slowdown_writes_trigger: 20
+2021/05/07-11:04:22.411477 fa4              Options.level0_stop_writes_trigger: 36
+2021/05/07-11:04:22.411483 fa4                   Options.target_file_size_base: 67108864
+2021/05/07-11:04:22.411489 fa4             Options.target_file_size_multiplier: 1
+2021/05/07-11:04:22.411495 fa4                Options.max_bytes_for_level_base: 268435456
+2021/05/07-11:04:22.411501 fa4 Options.level_compaction_dynamic_level_bytes: 0
+2021/05/07-11:04:22.411506 fa4          Options.max_bytes_for_level_multiplier: 10.000000
+2021/05/07-11:04:22.411514 fa4 Options.max_bytes_for_level_multiplier_addtl[0]: 1
+2021/05/07-11:04:22.411520 fa4 Options.max_bytes_for_level_multiplier_addtl[1]: 1
+2021/05/07-11:04:22.411526 fa4 Options.max_bytes_for_level_multiplier_addtl[2]: 1
+2021/05/07-11:04:22.411532 fa4 Options.max_bytes_for_level_multiplier_addtl[3]: 1
+2021/05/07-11:04:22.411538 fa4 Options.max_bytes_for_level_multiplier_addtl[4]: 1
+2021/05/07-11:04:22.411544 fa4 Options.max_bytes_for_level_multiplier_addtl[5]: 1
+2021/05/07-11:04:22.411550 fa4 Options.max_bytes_for_level_multiplier_addtl[6]: 1
+2021/05/07-11:04:22.411555 fa4       Options.max_sequential_skip_in_iterations: 8
+2021/05/07-11:04:22.411561 fa4                    Options.max_compaction_bytes: 1677721600
+2021/05/07-11:04:22.411567 fa4                        Options.arena_block_size: 8388608
+2021/05/07-11:04:22.411573 fa4   Options.soft_pending_compaction_bytes_limit: 68719476736
+2021/05/07-11:04:22.411579 fa4   Options.hard_pending_compaction_bytes_limit: 274877906944
+2021/05/07-11:04:22.411585 fa4       Options.rate_limit_delay_max_milliseconds: 100
+2021/05/07-11:04:22.411591 fa4                Options.disable_auto_compactions: 0
+2021/05/07-11:04:22.411598 fa4                        Options.compaction_style: kCompactionStyleLevel
+2021/05/07-11:04:22.411605 fa4                          Options.compaction_pri: kByCompensatedSize
+2021/05/07-11:04:22.411611 fa4 Options.compaction_options_universal.size_ratio: 1
+2021/05/07-11:04:22.411617 fa4 Options.compaction_options_universal.min_merge_width: 2
+2021/05/07-11:04:22.411623 fa4 Options.compaction_options_universal.max_merge_width: 4294967295
+2021/05/07-11:04:22.411629 fa4 Options.compaction_options_universal.max_size_amplification_percent: 200
+2021/05/07-11:04:22.411635 fa4 Options.compaction_options_universal.compression_size_percent: -1
+2021/05/07-11:04:22.411642 fa4 Options.compaction_options_universal.stop_style: kCompactionStopStyleTotalSize
+2021/05/07-11:04:22.411648 fa4 Options.compaction_options_fifo.max_table_files_size: 1073741824
+2021/05/07-11:04:22.411654 fa4 Options.compaction_options_fifo.allow_compaction: 0
+2021/05/07-11:04:22.411660 fa4 Options.compaction_options_fifo.ttl: 0
+2021/05/07-11:04:22.411666 fa4                   Options.table_properties_collectors: 
+2021/05/07-11:04:22.411674 fa4                   Options.inplace_update_support: 0
+2021/05/07-11:04:22.411681 fa4                 Options.inplace_update_num_locks: 10000
+2021/05/07-11:04:22.411688 fa4               Options.memtable_prefix_bloom_size_ratio: 0.000000
+2021/05/07-11:04:22.411694 fa4   Options.memtable_huge_page_size: 0
+2021/05/07-11:04:22.411700 fa4                           Options.bloom_locality: 0
+2021/05/07-11:04:22.411706 fa4                    Options.max_successive_merges: 0
+2021/05/07-11:04:22.411712 fa4                Options.optimize_filters_for_hits: 0
+2021/05/07-11:04:22.411718 fa4                Options.paranoid_file_checks: 0
+2021/05/07-11:04:22.411724 fa4                Options.force_consistency_checks: 0
+2021/05/07-11:04:22.411730 fa4                Options.report_bg_io_stats: 0
+2021/05/07-11:04:22.411735 fa4                               Options.ttl: 0
+2021/05/07-11:04:22.413533 fa4 [c:\users\aretter\code\rocksdb\db\version_set.cc:3361] Recovered from manifest file:./data/log_1/MANIFEST-000008 succeeded,manifest_file_number is 8, next_file_number is 10, last_sequence is 1, log_number is 0,prev_log_number is 0,max_column_family is 0,min_log_number_to_keep is 0
+2021/05/07-11:04:22.413548 fa4 [c:\users\aretter\code\rocksdb\db\version_set.cc:3369] Column family [default] (ID 0), log number is 7
+2021/05/07-11:04:22.413818 fa4 EVENT_LOG_v1 {"time_micros": 1620356662413808, "job": 1, "event": "recovery_started", "log_files": [9]}
+2021/05/07-11:04:22.413830 fa4 [c:\users\aretter\code\rocksdb\db\db_impl_open.cc:551] Recovering log #9 mode 2
+2021/05/07-11:04:22.414009 fa4 [c:\users\aretter\code\rocksdb\db\version_set.cc:2847] Creating manifest 11
+2021/05/07-11:04:22.469673 fa4 EVENT_LOG_v1 {"time_micros": 1620356662469662, "job": 1, "event": "recovery_finished"}
+2021/05/07-11:04:22.490456 fa4 [c:\users\aretter\code\rocksdb\db\db_impl_open.cc:1219] DB pointer 0000000046EA0EC0
+2021/05/07-11:30:30.741759 e87c [c:\users\aretter\code\rocksdb\db\db_impl.cc:252] Shutdown: canceling all background work
+2021/05/07-11:30:30.764621 e87c [c:\users\aretter\code\rocksdb\db\db_impl.cc:398] Shutdown complete

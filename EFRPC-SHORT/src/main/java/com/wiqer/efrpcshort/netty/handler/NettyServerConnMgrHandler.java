@@ -12,10 +12,7 @@ import io.netty.handler.timeout.IdleStateEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 @ChannelHandler.Sharable
 public class NettyServerConnMgrHandler extends ChannelDuplexHandler {
     private static final Logger logger = LogManager.getLogger(NettyServerConnMgrHandler.class.getSimpleName());

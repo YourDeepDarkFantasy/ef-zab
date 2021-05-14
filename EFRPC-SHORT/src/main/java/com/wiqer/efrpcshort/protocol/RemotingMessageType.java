@@ -1,11 +1,11 @@
 package com.wiqer.efrpcshort.protocol;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public enum RemotingMessageType {
+    /*请求*/
     REQUEST,
+    /*返回*/
     RESPONSE,
+    /*中转*/
     ONEWAY;
 }

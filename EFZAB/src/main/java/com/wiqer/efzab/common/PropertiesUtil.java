@@ -6,10 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class PropertiesUtil {
 
     private PropertiesUtil() {}

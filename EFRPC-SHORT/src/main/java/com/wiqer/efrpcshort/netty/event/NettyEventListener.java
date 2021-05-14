@@ -2,10 +2,7 @@ package com.wiqer.efrpcshort.netty.event;
 
 import io.netty.channel.Channel;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public interface NettyEventListener {
     void onConnect(final String remoteAddr, final Channel channel);
     void onClose(final String remoteAddr, final Channel channel);

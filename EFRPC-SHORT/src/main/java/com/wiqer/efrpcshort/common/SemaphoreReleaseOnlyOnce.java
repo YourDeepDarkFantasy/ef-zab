@@ -3,10 +3,7 @@ package com.wiqer.efrpcshort.common;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class SemaphoreReleaseOnlyOnce {
     private final AtomicBoolean released = new AtomicBoolean(false);
 

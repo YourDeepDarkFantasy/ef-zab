@@ -15,10 +15,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class DataManager {
     private static final Logger logger = LogManager.getLogger(DataManager.class.getSimpleName());
 

@@ -3,4 +3,4 @@ Archiver-Version: Plexus Archiver
 Built-By: lilan
 Created-By: Apache Maven 3.6.3
 Build-Jdk: 1.8.0_251
-
+Main-Class: com.wiqer.efzab.Bootstrap

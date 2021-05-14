@@ -3,16 +3,14 @@ package com.wiqer.efrpcshort.protocol;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class RemotingMessageHeader {
     private static final AtomicInteger requestId = new AtomicInteger(0);
 
     private int code;
     private LanguageCode language = LanguageCode.JAVA;
     private int version = 0;
+    //requestId原子自增
     private int opaque = requestId.getAndIncrement();
     private RemotingMessageType messageType = RemotingMessageType.REQUEST;
     private String remark;

@@ -2,10 +2,7 @@ package com.wiqer.efzab;
 
 import com.wiqer.efzab.data.ZxId;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class Vote implements Comparable<Vote>{
     private int nodeId;
     private volatile long epoch;

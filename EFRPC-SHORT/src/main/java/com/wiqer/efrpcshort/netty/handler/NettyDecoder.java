@@ -9,10 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.ByteBuffer;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+/*NettyDecoder是有状态的*/
 public class NettyDecoder extends LengthFieldBasedFrameDecoder {
     private static final Logger logger = LogManager.getLogger(NettyDecoder.class.getSimpleName());
 

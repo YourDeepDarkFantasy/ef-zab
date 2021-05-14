@@ -7,10 +7,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NettyEventExecutor extends ServiceThread {
     private static final Logger logger = LogManager.getLogger(NettyEventExecutor.class.getSimpleName());
 

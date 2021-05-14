@@ -7,10 +7,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class ResponseProcessor {
     private final int opaque;
     private final long timeout;
@@ -50,11 +47,12 @@ public class ResponseProcessor {
         return diff > timeout;
     }
 
+    //countDownLatch堵塞
     public RemotingMessage waitResponse(final long timeout) throws InterruptedException {
         countDownLatch.await(timeout, TimeUnit.MILLISECONDS);
         return responseMessage;
     }
-
+    //countDownLatch唤醒
     public void putResponse(RemotingMessage responseMessage) {
         this.responseMessage = responseMessage;
         countDownLatch.countDown();

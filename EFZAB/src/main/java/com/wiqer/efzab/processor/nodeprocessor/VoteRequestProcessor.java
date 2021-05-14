@@ -12,10 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class VoteRequestProcessor implements NettyRequestProcessor {
     private static final Logger logger = LogManager.getLogger(VoteRequestProcessor.class.getSimpleName());
 
@@ -34,11 +31,13 @@ public class VoteRequestProcessor implements NettyRequestProcessor {
                 logger.info("Receive peer vote: {}", peerVote);
 
                 node.getVoteBox().put(peerVote.getNodeId(), peerVote);
+                //版本号大于当前节点
                 if (peerVote.getEpoch() > node.getMyVote().getEpoch()) {
                     node.getMyVote().setEpoch(peerVote.getEpoch());
                     node.getMyVote().setVoteId(peerVote.getNodeId());
                     node.setStatus(NodeStatus.LOOKING);
                 }else if (peerVote.getEpoch() == node.getMyVote().getEpoch()) {
+                    //分支号大于当前节点
                     if (peerVote.compareTo(node.getMyVote()) == 1) {
                         node.getMyVote().setVoteId(peerVote.getNodeId());
                         node.setStatus(NodeStatus.LOOKING);

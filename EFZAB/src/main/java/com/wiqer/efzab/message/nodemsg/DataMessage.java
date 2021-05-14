@@ -4,10 +4,7 @@ import com.wiqer.efzab.data.Data;
 import com.wiqer.efzab.message.AbstractMessage;
 import com.wiqer.efzab.message.MessageType;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class DataMessage extends AbstractMessage<DataMessage> {
     public enum Type {
         SYNC, SNAPSHOT, COMMIT

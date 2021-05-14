@@ -15,10 +15,7 @@ import org.junit.Test;
 import java.nio.charset.Charset;
 import java.util.concurrent.Executors;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class RemotingTest {
     private NettyRemotingServer remotingServer;
     private NettyRemotingClient remotingClient;

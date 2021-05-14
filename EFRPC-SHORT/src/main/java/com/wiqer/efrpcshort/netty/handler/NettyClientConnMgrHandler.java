@@ -14,10 +14,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.net.SocketAddress;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NettyClientConnMgrHandler extends ChannelDuplexHandler {
     private static final Logger logger = LogManager.getLogger(NettyClientConnMgrHandler.class.getSimpleName());
 

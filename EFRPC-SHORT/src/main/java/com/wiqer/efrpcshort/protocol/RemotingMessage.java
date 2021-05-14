@@ -5,10 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.ByteBuffer;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class RemotingMessage {
     private static final Logger logger = LogManager.getLogger(RemotingMessage.class.getSimpleName());
     private static SerializeType serializeType = SerializeType.JSON;
@@ -26,7 +23,7 @@ public class RemotingMessage {
     public ByteBuffer encode() {
         // 消息字节长度
         int length = 4;
-        // 序列化后的消息头数据
+        // 序列化后的消息头数据，本身RemotingMessage
         byte[] headerData = this.serializeHeaderData();
         // 加上消息头的字节长度
         length += headerData.length;
@@ -35,12 +32,14 @@ public class RemotingMessage {
             length += messageBody.length;
         }
 
+        //开头放length感觉上比结尾分割合理，不限制消息内容
         // 按通信协议转换成字节序列
         // |<- length ->|<- header_length ->|<- header_data ->|<- body data ->|
         ByteBuffer byteBuffer = ByteBuffer.allocate(4 + length);
         byteBuffer.putInt(length);
         byteBuffer.put(markSerializeType(headerData.length, serializeType));
         byteBuffer.put(headerData);
+        /*写入消息体*/
         if (messageBody != null) {
             byteBuffer.put(messageBody);
         }

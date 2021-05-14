@@ -4,10 +4,7 @@ import com.alibaba.fastjson.JSON;
 
 import java.nio.charset.Charset;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class JSONSerializable {
     private static final Charset CHARSET_UTF8 = Charset.forName("UTF-8");
 

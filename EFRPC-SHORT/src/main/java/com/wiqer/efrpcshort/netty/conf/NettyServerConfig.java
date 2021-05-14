@@ -1,9 +1,6 @@
 package com.wiqer.efrpcshort.netty.conf;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NettyServerConfig {
     private String listenAddr = "127.0.0.1";
     private int listenPort = 9999;

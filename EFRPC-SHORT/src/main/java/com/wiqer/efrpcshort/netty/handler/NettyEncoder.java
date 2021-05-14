@@ -11,10 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.ByteBuffer;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 @ChannelHandler.Sharable
 public class NettyEncoder extends MessageToByteEncoder<RemotingMessage> {
     private static final Logger logger = LogManager.getLogger(NettyEvent.class.getSimpleName());

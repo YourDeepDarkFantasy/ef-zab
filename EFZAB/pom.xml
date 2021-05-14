@@ -16,7 +16,7 @@
       <groupId>com.wiqer</groupId>
       <artifactId>efrpc-short</artifactId>
       <version>1.0</version>
-      <scope>jar</scope>
+      <scope>compile</scope>
     </dependency>
 
     <dependency>
@@ -72,6 +72,33 @@
           <source>8</source>
           <target>8</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <appendAssemblyId>false</appendAssemblyId>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>io.test.main.MainOfDiskMount</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>assembly</goal>
+            </goals>
+
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

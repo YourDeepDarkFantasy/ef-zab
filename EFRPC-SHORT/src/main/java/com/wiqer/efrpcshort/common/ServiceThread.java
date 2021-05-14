@@ -3,10 +3,7 @@ package com.wiqer.efrpcshort.common;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public abstract class ServiceThread implements Runnable {
     private static final Logger logger = LogManager.getLogger(ServiceThread.class.getSimpleName());
 

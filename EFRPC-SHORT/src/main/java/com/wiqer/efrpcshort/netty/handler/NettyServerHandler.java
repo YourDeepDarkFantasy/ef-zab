@@ -5,10 +5,7 @@ import com.wiqer.efrpcshort.protocol.RemotingMessage;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NettyServerHandler extends SimpleChannelInboundHandler<RemotingMessage> {
     private final NettyRemotingServer nettyRemoting;
 

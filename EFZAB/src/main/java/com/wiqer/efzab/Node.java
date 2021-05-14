@@ -27,15 +27,15 @@ import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class Node {
     private static final Logger logger = LogManager.getLogger(Node.class.getSimpleName());
 
+    /*投票箱*/
     private final ConcurrentMap<Integer, Vote> voteBox = new ConcurrentHashMap<>();
+    /*向量时钟容器*/
     private final ConcurrentMap<Integer, ZxId> zxIdMap = new ConcurrentHashMap<>();
+    /*快照*/
     private final ConcurrentMap<Integer, Boolean> snapshotMap = new ConcurrentHashMap<>();
     private final Lock voteLock = new ReentrantLock();
     private final Lock dataLock = new ReentrantLock();
@@ -49,10 +49,14 @@ public class Node {
     private volatile NodeStatus status = NodeStatus.FOLLOWING;
     private volatile int leaderId;
     private volatile long epoch;
+    /*启动标记*/
     private volatile boolean running = false;
 
+    /*节点*/
     private RemotingServer nodeServer;
+    /*消息处理*/
     private RemotingServer nodeMgrServer;
+    /*客户端*/
     private RemotingClient client;
 
     private Vote myVote;
@@ -75,13 +79,19 @@ public class Node {
                 return;
             }
 
+            //开启第一个端口对应的服务
+            //集群的服务
             nodeMgrServer = new NettyRemotingServer(new NettyServerConfig(nodeConfig.getHost(), nodeConfig.getNodeMgrPort()));
             nodeMgrServer.registerProcessor(MessageType.JOIN_GROUP, new JoinGroupProcessor(this), executorService);
             nodeMgrServer.start();
 
+            //开启第二个端口对应的服务
             nodeServer = new NettyRemotingServer(new NettyServerConfig(nodeConfig.getHost(), nodeConfig.getPort()));
+            //节点间选举
             nodeServer.registerProcessor(MessageType.VOTE, new VoteRequestProcessor(this), executorService);
+            //数据同步
             nodeServer.registerProcessor(MessageType.DATA_SYNC, new DataRequestProcessor(this), executorService);
+            //为客户端开启服务
             nodeServer.registerProcessor(MessageType.CLIENT, new ClientRequestProcessor(this), executorService);
             nodeServer.start();
 
@@ -142,6 +152,7 @@ public class Node {
         }
     }
 
+    //加入组
     private void init() {
         JoinGroupMessage joinGroupMsg = JoinGroupMessage.getInstance();
         joinGroupMsg.setNodeId(nodeConfig.getNodeId());
@@ -175,8 +186,9 @@ public class Node {
             });
         }
     }
-
+    //选举方法
     private void election() {
+        //领导者不参与
         if (status == NodeStatus.LEADING) {
             return;
         }
@@ -189,6 +201,7 @@ public class Node {
         epoch += 1;
         zxIdMap.clear();
 
+        //选自己
         this.myVote = new Vote(nodeConfig.getNodeId(), nodeConfig.getNodeId(), 0, getLastZxId());
         this.myVote.setEpoch(epoch);
         this.voteBox.put(nodeConfig.getNodeId(), myVote);
@@ -203,21 +216,26 @@ public class Node {
             return;
         }
 
+        /*时间间隔判断，不能发的太频*/
         if (!nodeConfig.resetHeartbeatTick()) {
             return;
         }
 
+        /*从配置中遍历所有节点*/
         for (Map.Entry<Integer, String> entry : nodeConfig.getNodeMap().entrySet()) {
+            /*没有参与投票的节点跳过*/
             if (!voteBox.containsKey(entry.getKey())) {
                 continue;
             }
 
+            /*不给自己发心跳*/
             if (entry.getKey() == nodeConfig.getNodeId()) {
                 continue;
             }
 
             long index = -1;
             if (zxIdMap.containsKey(entry.getKey())) {
+
                 index = zxIdMap.get(entry.getKey()).getCounter();
             }else {
                 index = dataManager.getLastIndex();
@@ -252,6 +270,7 @@ public class Node {
         }
     }
 
+    //除了自己挨个发一遍
     public void sendOneWayMsg(RemotingMessage msg) {
         for (Map.Entry<Integer, String> entry : nodeConfig.getNodeMap().entrySet()) {
             if (entry.getKey() == nodeConfig.getNodeId()) {
@@ -346,6 +365,7 @@ public class Node {
     }
 
     public boolean commitData(final String key) throws InterruptedException {
+        //等待上一步群发过半完成，成功在提交
         if (countDownLatch.await(6000, TimeUnit.MILLISECONDS)) {
             snapshotMap.clear();
             long lastIndex = dataManager.getLastIndex();

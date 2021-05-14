@@ -5,10 +5,7 @@ import com.wiqer.efrpcshort.ResponseProcessor;
 import com.wiqer.efrpcshort.common.SemaphoreReleaseOnlyOnce;
 import io.netty.channel.Channel;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class NettyResponseProcessor extends ResponseProcessor {
     private final Channel processChannel;
 

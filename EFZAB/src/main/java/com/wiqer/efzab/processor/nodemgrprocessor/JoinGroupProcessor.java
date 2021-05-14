@@ -8,10 +8,7 @@ import io.netty.channel.ChannelHandlerContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class JoinGroupProcessor implements NettyRequestProcessor {
     private static final Logger logger = LogManager.getLogger(JoinGroupProcessor.class.getSimpleName());
 

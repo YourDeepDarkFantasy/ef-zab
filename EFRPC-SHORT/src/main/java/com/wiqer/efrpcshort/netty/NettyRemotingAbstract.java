@@ -28,17 +28,16 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public abstract class NettyRemotingAbstract implements RemotingService {
     private static final Logger logger = LogManager.getLogger(NettyRemotingAbstract.class.getSimpleName());
 
     protected final Semaphore semaphoreOneway;
     protected final Semaphore semaphoreAsync;
 
+    //堵塞器的容器
     protected final ConcurrentHashMap<Integer, NettyResponseProcessor> responseTable = new ConcurrentHashMap<Integer, NettyResponseProcessor>(256);
+    //处理器容器
     protected final HashMap<Integer, Pair<NettyRequestProcessor, ExecutorService>> processorTable = new HashMap<Integer, Pair<NettyRequestProcessor, ExecutorService>>(64);
 
     protected final NettyEventExecutor nettyEventExecutor = new NettyEventExecutor();
@@ -83,6 +82,7 @@ public abstract class NettyRemotingAbstract implements RemotingService {
         }
     }
 
+    //拔出机器放到processorTable中，processorTable的数据结构-》HashMap<Integer, Pair<NettyRequestProcessor, ExecutorService>>
     @Override
     public void registerProcessor(int requestCode, RequestProcessor processor, ExecutorService executor) {
         ExecutorService executorService = executor;
@@ -125,6 +125,7 @@ public abstract class NettyRemotingAbstract implements RemotingService {
         final int opaque = request.getMessageHeader().getOpaque();
         try {
             final NettyResponseProcessor responseProcessor = new NettyResponseProcessor(channel, opaque, timeout, null, null);
+            //先把堵塞器添加到map中 key是opaque
             responseTable.put(opaque, responseProcessor);
             channel.writeAndFlush(request).addListener(new ChannelFutureListener() {
                 @Override
@@ -140,6 +141,7 @@ public abstract class NettyRemotingAbstract implements RemotingService {
                 }
             });
 
+            //进入堵塞
             RemotingMessage response = responseProcessor.waitResponse(timeout);
             if (response == null) {
                 if (responseProcessor.isSendRequestOK()) {
@@ -239,6 +241,7 @@ public abstract class NettyRemotingAbstract implements RemotingService {
     public abstract ExecutorService getPublicExecutor();
 
     private void processRequestMessage(final ChannelHandlerContext ctx, final RemotingMessage request) {
+        //根据请求类型request.getMessageHeader().getCode()，选择处理器
         final Pair<NettyRequestProcessor, ExecutorService> processorByTable = processorTable.get(request.getMessageHeader().getCode());
         final Pair<NettyRequestProcessor, ExecutorService> processorExecutor = null == processorByTable ? defaultRequestProcessor: processorByTable;
         final int opaque = request.getMessageHeader().getOpaque();
@@ -248,6 +251,8 @@ public abstract class NettyRemotingAbstract implements RemotingService {
                 @Override
                 public void run() {
                     try {
+                        //获取processorExecutor-》NettyRequestProcessor=》processRequest请求处理器
+                        //response是处理结果
                         final RemotingMessage response = processorExecutor.getObject1().processRequest(ctx, request);
 
                         if (request.getMessageHeader().getMessageType() != RemotingMessageType.ONEWAY) {
@@ -255,6 +260,7 @@ public abstract class NettyRemotingAbstract implements RemotingService {
                             response.getMessageHeader().setMessageType(RemotingMessageType.RESPONSE);
 
                             try {
+                                //原路返回消息
                                 ctx.writeAndFlush(response);
                             }catch (Throwable e) {
                                 logger.error("Response error " + e.getMessage());
@@ -269,6 +275,7 @@ public abstract class NettyRemotingAbstract implements RemotingService {
                 }
             };
 
+            //判断是否遗弃请求
             if (processorExecutor.getObject1().rejectRequest()) {
                 final RemotingMessage response = RemotingMessage.createResponseMessage(SysResponseCode.SYSTEM_BUSY.ordinal(), "[REJECTREQUEST] system busy");
                 response.getMessageHeader().setOpaque(opaque);

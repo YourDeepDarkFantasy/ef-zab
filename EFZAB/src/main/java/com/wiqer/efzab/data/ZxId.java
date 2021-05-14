@@ -1,9 +1,6 @@
 package com.wiqer.efzab.data;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class ZxId implements Comparable<ZxId> {
     private long epoch;
     private long counter;
