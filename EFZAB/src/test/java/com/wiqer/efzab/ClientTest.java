@@ -5,10 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * WX: coding到灯火阑珊
- * @author Justin
- */
+
 public class ClientTest {
     private Client client;
 
