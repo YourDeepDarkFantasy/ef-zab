@@ -51,24 +51,8 @@ Main-Class:  com.wiqer.efzab.Bootstrap
 linux/win命令都是如下（注意java环境变量）：
 java -jar com.wiqer.efzab.Bootstrap.class
 
-#### efzab实现分布式事务
-1，添加@GlobalLock
-2，需要扫描到指定的实体类
-3，需要实体类被Spring反向代理
-```
-    @GetMapping("/lock")
-    @GlobalLock
-    public String lock() {
-        try {
-            Thread.sleep(4000);
-        }catch (Exception e){
 
-        }
-        return "ok";
-
-    }
-```
-##实现原理
+## 实现原理
 zab三阶段过半数持久化协议
 ## 致敬
 zookeeper
